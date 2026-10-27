@@ -1,0 +1,62 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cube.market — hover zoom preview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><style>
+:root{--demo-section:linear-gradient(130deg,#eee9f7 0%,#faf8fc 54%,#e7def3 100%);--demo-card:#FFFFFF;--demo-media-start:#ddd4ed;--demo-media-end:#f7f2fa;--demo-accent:#67558d;--demo-stat:#e9e2f3}
+*{box-sizing:border-box}body{margin:0;font-family:Onest,Arial,sans-serif;background:#f8f8f6}.preview-header{max-width:1260px;margin:auto;padding:35px 26px 25px}.preview-header h1{font-size:clamp(25px,3vw,38px);letter-spacing:-.04em;margin:0 0 10px}.preview-header p{color:#6a6a6a;line-height:1.6;margin:0 0 22px}.options{display:flex;gap:9px;flex-wrap:wrap}.options button{font:600 14px Onest,Arial,sans-serif;border:1px solid #d9d9d9;background:#fff;color:#292929;border-radius:50px;padding:12px 19px;cursor:pointer}.options button[aria-pressed="true"]{background:#262626;color:#fff;border-color:#262626}.preview-stage{background:var(--demo-section);padding:72px max(24px,calc((100vw - 1200px)/2)) 90px;transition:background .35s}.stage-label{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#666;margin-bottom:20px}.demo-card{background:var(--demo-card);border:1px solid rgba(40,40,40,.06);border-radius:28px;padding:24px;box-shadow:0 12px 35px rgba(30,30,30,.025);transition:background .35s}.demo-card .project-row{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,1fr);gap:clamp(24px,4vw,58px);align-items:center;border:0;margin:0;padding:0}.demo-card .project-row__img{display:flex;align-items:center;justify-content:center;min-width:0;overflow:hidden;border-radius:20px;background:linear-gradient(125deg,var(--demo-media-start),var(--demo-media-end));padding:20px;transition:background .35s}.demo-card .project-row__img img{display:block;width:100%;height:auto;object-fit:contain;border-radius:13px}.demo-card .project-row__content{min-width:0}.demo-card .project-row__title{font-family:Onest,Arial,sans-serif}/* Editorial project result: no pill, border or filled surface */
+.demo-card .project-row__stat{display:flex;align-items:center;gap:22px;padding:0;margin:25px 0 22px;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.demo-card .project-row__stat-value{display:block;background:none!important;color:#29272d;font-size:clamp(35px,3.8vw,52px);font-weight:650;line-height:1;letter-spacing:-.06em;white-space:nowrap;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.demo-card .project-row__stat-caption{display:block;max-width:230px;font-size:13px;line-height:1.5;color:#69656e}
+.demo-card .project-row__link{color:#242424!important;text-decoration:none;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eae8ed;padding-top:18px;margin-top:0}
+.demo-card .project-row__link:hover,.demo-card .project-row__link:focus-visible{color:#755A82!important}
+.demo-card .project-row__link .case-arrow{display:inline-block;transition:transform .22s ease}
+.demo-card .project-row__link:hover .case-arrow,.demo-card .project-row__link:focus-visible .case-arrow{transform:translate(3px,-3px)}
+@media(prefers-reduced-motion:reduce){.demo-card .project-row__link .case-arrow{transition:none}}
+@media(max-width:420px){.demo-card .project-row__stat{gap:14px}.demo-card .project-row__stat-value{font-size:37px}}
+.demo-card .project-row__index{color:var(--demo-accent)}.demo-card [data-i18n="en"]{display:none!important}.preview-footer{max-width:1260px;margin:auto;padding:24px 26px 55px;color:#777;font-size:13px;line-height:1.7}.preview-footer a{color:#333}@media(max-width:800px){.preview-stage{padding:32px 15px 45px}.demo-card{padding:14px;border-radius:22px}.demo-card .project-row{grid-template-columns:1fr;gap:24px}.demo-card .project-row__img{padding:12px}.demo-card .project-row__content{padding:0 8px 12px}.preview-header{padding:24px 18px}}
+
+/* Misty Blue: quiet editorial category, not a button */
+.demo-card .project-row__index{display:flex;align-items:center;gap:12px;color:#8a8b94!important;font-size:12px!important;text-transform:none!important;letter-spacing:normal!important}
+.demo-card .project-row__index [data-i18n]{display:inline-flex;align-items:center;background:#E5EBF2;color:#425773;padding:6px 12px;border-radius:999px;font-family:Onest,Arial,sans-serif;font-size:12px;font-weight:500;line-height:1.3;letter-spacing:0;text-transform:none}
+.demo-card .project-row__index .project-row__num{color:#898994;letter-spacing:.04em}
+.demo-card .project-row__link{justify-content:flex-start!important;display:inline-block!important;border-top:0!important;padding-top:0!important;text-decoration:none!important;font-weight:500;transition:color .2s ease}
+.demo-card .project-row__link:hover,.demo-card .project-row__link:focus-visible{text-decoration:underline!important;text-underline-offset:4px}
+.demo-card{transition:transform .35s ease,box-shadow .35s ease}
+.demo-card:hover{transform:none;box-shadow:0 12px 35px rgba(30,30,30,.025)}
+@media(prefers-reduced-motion:reduce){.demo-card{transition:none}.demo-card:hover{transform:none}}
+/* Hover preview: only the project image gently zooms */
+.demo-card .project-row__img img{transition:transform 650ms cubic-bezier(.22,1,.36,1);transform:scale(1);will-change:transform}
+.demo-card:hover .project-row__img img,.demo-card:focus-within .project-row__img img{transform:scale(1.035)}
+.demo-card .project-row__link{text-decoration:none!important}
+.demo-card:hover .project-row__link{text-decoration:underline!important;text-underline-offset:5px}
+@media(prefers-reduced-motion:reduce){.demo-card .project-row__img img{transition:none!important}.demo-card:hover .project-row__img img,.demo-card:focus-within .project-row__img img{transform:none}}
+</style></head><body><header class="preview-header"><h1>Cube.market / тест hover-анимации</h1><p>Наведи курсор на карточку: изображение плавно увеличится на 3,5%, ссылка подчеркнётся. Белая карточка и Misty Blue остаются без движения. Рабочий сайт не меняется.</p><div class="options"><button data-theme="lavender" aria-pressed="true">Lavender Glow</button><button data-theme="sage" aria-pressed="false">Sage Haze</button><button data-theme="peach" aria-pressed="false">Peach Aura</button></div></header><main class="preview-stage"><div class="stage-label">Selected work / 01 — 04</div><div class="demo-card"><article class="project-row">
+            <a href="project-1.html" class="project-row__img">
+              <img src="mockup_project1.png" alt="Cube.market — редизайн карточки товара" loading="lazy" />
+            </a>
+            <div class="project-row__content">
+              <div class="project-row__index">
+                <span data-i18n="ru">e-commerce</span>
+                <span data-i18n="en">e-commerce</span>
+                <span class="project-row__num">01 / 04</span>
+              </div>
+              <h3 class="project-row__title" data-i18n="ru">Cube.market</h3>
+              <h3 class="project-row__title" data-i18n="en">Cube.market</h3>
+              <p class="project-row__desc" data-i18n="ru">
+                Редизайн карточки товара на маркетплейсе искусства и дизайна:
+                от невидимой кнопки покупки к понятной e-commerce структуре.
+              </p>
+              <p class="project-row__desc" data-i18n="en">
+                Product page redesign for an art and design marketplace: from
+                a buried purchase button to a clear e-commerce structure.
+              </p>
+
+              <div class="project-row__stat" aria-label="Результат проекта">
+                <span class="project-row__stat-value">+56%</span>
+                <span class="project-row__stat-caption" data-i18n="ru">Конверсия «Карточка → Корзина» за первый месяц</span>
+                <span class="project-row__stat-caption" data-i18n="en">"Product → Cart" conversion, first month</span>
+              </div>
+
+              <a href="project-1.html" class="project-row__link" data-i18n="ru">Смотреть кейс</a>
+              <a href="project-1.html" class="project-row__link" data-i18n="en">View case</a>
+            </div>
+          </article></div></main><footer class="preview-footer">Открой эту страницу через Live Server из папки портфолио: изображение <code>mockup_project1.png</code> и <code>styles.css</code> берутся из неё. <a href="index.html">Вернуться на сайт →</a></footer><script>
+const themes={lavender:['linear-gradient(130deg,#EEE9F7 0%,#FAF8FC 54%,#E7DEF3 100%)','#FFFFFF','#D9D0EB','#F5F0F9','#67558D','#E9E2F3'],sage:['linear-gradient(130deg,#E7EEE5 0%,#F9FAF7 54%,#DDE8D8 100%)','#FFFFFF','#D3DEC9','#F2F5EE','#607B53','#E1EBDD'],peach:['linear-gradient(130deg,#F8E8E1 0%,#FFF9F5 54%,#F4DDD7 100%)','#FFFFFF','#F0D3C7','#FFF2E7','#A76555','#F7E3D8']};const vars=['--demo-section','--demo-card','--demo-media-start','--demo-media-end','--demo-accent','--demo-stat'];document.querySelectorAll('[data-theme]').forEach(b=>b.addEventListener('click',()=>{vars.forEach((v,i)=>document.documentElement.style.setProperty(v,themes[b.dataset.theme][i]));document.querySelectorAll('[data-theme]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}));
+</script></body></html>

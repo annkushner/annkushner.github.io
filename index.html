@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-title-ru="Анна Иванова — UX/UI Дизайнер" data-i18n-title-en="Anna Ivanova — UX/UI Designer">Анна
+    Иванова — UX/UI Дизайнер</title>
+  <meta name="description"
+    data-i18n-desc-ru="Портфолио Анны Ивановой — UX/UI дизайнер. Проектирую понятные интерфейсы для веб- и мобильных продуктов."
+    data-i18n-desc-en="Portfolio of Anna Ivanova — UX/UI Designer. I craft clear interfaces for web and mobile products."
+    content="Портфолио Анны Ивановой — UX/UI дизайнер. Проектирую понятные интерфейсы для веб- и мобильных продуктов." />
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css?v=footer-flight-4" />
+  <link rel="stylesheet" href="career-climber.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+<style id="cube-wave-preview-style">
+/* Animate only the independent wave layer, never the product interface. */
+#projects .cube-wave-preview{isolation:isolate;background:#592b86}
+.cube-wave-filter{position:absolute;pointer-events:none}
+#projects .cube-wave-preview .cube-wave-layer{position:absolute;inset:-7%;z-index:0;transform-origin:50% 50%;pointer-events:none}
+#projects .cube-wave-preview img.cube-wave-background{display:block;width:100%;height:100%;object-fit:cover;transform:none!important;transition:none!important;border:0;border-radius:0}
+#projects .cube-wave-preview img.cube-wave-browser{position:absolute;left:7%;top:20%;width:86%;height:auto;max-width:none;object-fit:contain;object-position:top;z-index:2;transform:none!important;transition:none!important;border:0;border-radius:10px 10px 0 0;box-shadow:0 16px 45px rgba(28,7,45,.22);pointer-events:none}
+.cube-wave-light{position:absolute;inset:-30%;z-index:1;opacity:0;background:radial-gradient(ellipse at 65% 30%,rgba(255,217,207,.38),transparent 58%);mix-blend-mode:screen;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.cube-wave-light{display:none}}
+</style>
+<style id="cube-browser-hover-zoom">
+#projects .cube-wave-preview img.cube-wave-browser{transform:scale(1)!important;transform-origin:50% 35%;transition:transform .85s cubic-bezier(.22,1,.36,1)!important}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+#projects .project-shell:hover .cube-wave-preview img.cube-wave-browser{transform:scale(1.025)!important}}
+</style>
+<style id="cube-wave-vivid-color">
+#projects .cube-wave-preview img.cube-wave-background{filter:saturate(1.12) contrast(1.035);transition:filter .8s ease!important}
+@media(hover:hover) and (pointer:fine){
+#projects .project-shell:hover .cube-wave-preview img.cube-wave-background{filter:saturate(1.38) contrast(1.07)}}
+/* Keep highlights from washing out the violet and coral. */
+#projects .cube-wave-preview .cube-wave-light{background:radial-gradient(ellipse at 65% 30%,rgba(255,127,104,.13),transparent 58%);mix-blend-mode:soft-light}
+@media(prefers-reduced-motion:reduce){#projects .cube-wave-preview img.cube-wave-background{transition:none!important}}
+</style>
+<style id="collet-wave-colors">
+#projects .collet-wave-preview{background:#243b83}
+#projects .collet-wave-preview .cube-wave-light{background:radial-gradient(ellipse at 65% 30%,rgba(124,159,255,.12),transparent 58%)}
+#projects .collet-wave-preview img.cube-wave-background{filter:saturate(1.1) contrast(1.025)}
+@media(hover:hover) and (pointer:fine){#projects .project-shell:hover .collet-wave-preview img.cube-wave-background{filter:saturate(1.24) contrast(1.045)}}
+</style>
+<style id="seller-mobile-wave-previews">
+#projects .seller-wave-preview{background:#eae3f5}
+#projects .seller-wave-preview img.cube-wave-browser{left:3%;top:17%;width:94%;box-shadow:none;border-radius:0}
+#projects .seller-wave-preview .cube-wave-light{background:radial-gradient(ellipse at 70% 30%,rgba(161,91,232,.13),transparent 58%)}
+#projects .mobile-wave-preview{background:#faf7fc}
+#projects .mobile-wave-preview img.cube-wave-browser{left:5%;top:17%;width:90%;box-shadow:none;border-radius:0;transform-origin:50% 50%}
+#projects .mobile-wave-preview .cube-wave-light{background:radial-gradient(ellipse at 65% 25%,rgba(255,154,99,.15),transparent 58%)}
+</style>
+<style id="footer-contact-game-layout">
+#contact .socials--buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;max-width:none;margin-left:auto;margin-right:auto}
+#contact .socials--buttons>li{flex:0 1 190px}
+#contact .socials--buttons>li:not(:has(a)){display:none}
+#contact .footer-game-message{position:absolute!important;margin:0!important;max-width:none!important;color:rgba(255,255,255,.7)!important;font-size:15px!important;line-height:1.5!important;text-align:left!important;z-index:3;pointer-events:none}
+#contact .footer-game-message>span{font-weight:400!important;line-height:1.5!important}
+#contact .footer-game-message>small{color:inherit!important;font-size:12px!important;line-height:1.5!important;margin:8px 0 0!important;max-width:none!important;opacity:.8}
+@media(max-width:600px){#contact .socials--buttons>li{flex-basis:160px}#contact .footer-game-message{text-align:center!important;font-size:14px!important}}
+</style>
+<style id="footer-mobile-compact-game">
+@media(max-width:600px){#contact.contact:has(.footer-glass){min-height:0!important;padding-bottom:0!important;box-sizing:border-box}}
+</style>
+<style id="mobile-hero-full-width">
+@media(max-width:600px){
+.hero .hero__title{width:calc(100vw - 32px);max-width:none;font-size:18vw;line-height:1;align-items:center;gap:0;margin-left:0;margin-right:0}
+.hero .hero__title .word{display:block;flex:none;width:max-content;max-width:none;white-space:nowrap;line-height:1.02;letter-spacing:-.04em}
+}
+</style>
+<style id="about-skill-groups-style">
+.about-skill-groups{display:flex;flex-direction:column;gap:28px;margin-top:32px}
+.about-skill-group{min-width:0}.about-skill-group .about__subhead{margin-top:0;margin-bottom:12px}.about-skill-group .tags{margin:0;gap:8px;flex-wrap:wrap}
+.about-language-note{margin-top:24px!important;font-size:14px!important;line-height:1.5;color:var(--text-soft)}
+</style>
+</head>
+
+<body>
+  <!-- ============ НАВИГАЦИЯ ============ -->
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Анна Иванова</a>
+    <nav class="nav__links">
+      <a href="#projects" data-i18n="ru">Проекты</a>
+      <a href="#projects" data-i18n="en">Projects</a>
+      <a href="#about" data-i18n="ru">Обо мне</a>
+      <a href="#about" data-i18n="en">About</a>
+      <div class="lang" data-lang-menu>
+        <button class="lang__trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-options" aria-label="Choose language">
+          <span data-lang-current>EN</span><svg class="lang__chevron" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m3.5 6 4.5 4 4.5-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang__menu" id="lang-options" role="menu" hidden>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang-btn="en">English</button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang-btn="ru">Русский</button>
+        </div>
+      </div>
+      <a href="#contact" class="nav__cta" data-i18n="ru">Связаться</a>
+      <a href="#contact" class="nav__cta" data-i18n="en">Get in touch</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Карьерная лестница: появляется, когда секция проектов достигает верха экрана -->
+  <div class="career-track" id="career-track" aria-hidden="true">
+    <div class="career-ladder" id="career-ladder"></div>
+    <div class="career-climber" id="career-climber">
+      <img class="career-pose" src="character-1.svg" alt="">
+      <img class="career-pose" src="character-2.svg" alt="">
+      <img class="career-pose" src="character-3.svg" alt="">
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero-particles-section">
+      <canvas id="hero-particles" class="hero__particles"></canvas>
+      <h1 class="hero__title">
+        <!-- PRODUCT → «O» заменена на круглый медиа-блок -->
+        <span class="word">PR<span class="o-media">
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="video_Kling.mp4" type="video/mp4" />
+            </video>
+          </span>DUCT</span>
+
+        <!-- DESIGNER → обычная буква I -->
+        <span class="word">DESIGNER</span>
+      </h1>
+
+      <p class="hero__sub" data-i18n="ru">Продуктовый дизайнер, UX/UI&nbsp;· E-commerce&nbsp;· Арт маркетплейсы&nbsp;· B2B &amp; B2C</p>
+      <p class="hero__sub" data-i18n="en">Product designer, UX/UI&nbsp;· E-commerce&nbsp;· Art marketplaces&nbsp;· B2B &amp; B2C</p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary" data-i18n="ru">Смотреть работы</a>
+        <a href="#projects" class="btn btn--primary" data-i18n="en">View work</a>
+        <a href="#contact" class="btn btn--ghost" data-i18n="ru">Связаться</a>
+        <a href="#contact" class="btn btn--ghost" data-i18n="en">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ============ ПРОЕКТЫ ============ -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-head__label" data-i18n="ru">Избранное</span>
+          <span class="section-head__label" data-i18n="en">Selected work</span>
+          <h2 class="section-head__title" data-i18n="ru">Проекты</h2>
+          <h2 class="section-head__title" data-i18n="en">Projects</h2>
+        </div>
+
+        <div class="projects-list">
+          <!-- ===== Проект 1: Cube.market, карточка товара ===== -->
+          <a href="project-1.html" class="project-shell reveal"><div class="project-row">
+            <div class="project-row__img cube-wave-preview" data-cube-wave>
+<div class="cube-wave-layer" data-wave-layer aria-hidden="true"><img class="cube-wave-background" src="assets/embedded-3956f1b3f3eb168db992.png" alt="" /></div>
+<div class="cube-wave-light" aria-hidden="true" data-wave-light></div>
+<img class="cube-wave-browser" src="assets/embedded-e7b28839230c87312f1e.png" alt="Cube.market — карточка произведения искусства" loading="eager" />
+</div>
+            <div class="project-row__content">
+              <div class="project-row__index">
+                <span data-i18n="ru">e-commerce</span>
+                <span data-i18n="en">e-commerce</span>
+                <span class="project-row__num">01 / 04</span>
+              </div>
+              <h3 class="project-row__problem" data-i18n="ru">Упростила путь от выбора товара до оформления заказа</h3>
+              <h3 class="project-row__problem" data-i18n="en">Simplified the journey from product discovery to placing an order</h3>
+              <p class="project-row__desc" data-i18n="ru">
+                Развитие Cube.market при переходе от галерейного магазина к маркетплейсу.
+                В кейсе — выбранные задачи: карточка товара, корзина и регистрация.
+              </p>
+              <p class="project-row__desc" data-i18n="en">
+                Developing Cube.market from a gallery shop into a marketplace.
+                Selected challenges: the product page, cart and registration.
+              </p>
+
+              <div class="project-row__stat">
+                <span class="project-row__stat-value">+42%</span>
+                <span class="project-row__stat-caption" data-i18n="ru">Конверсия в оформление заказа среди визитов с просмотром корзины*<small style="display:block;margin-top:8px;font-size:11px;line-height:1.45;font-weight:400;color:var(--text-mute)">*Сравнение четырёх месяцев до и после обновления.</small></span>
+                <span class="project-row__stat-caption" data-i18n="en">Order placement conversion among visits that included a cart view*<small style="display:block;margin-top:8px;font-size:11px;line-height:1.45;font-weight:400;color:var(--text-mute)">*Four months before vs. four months after the update.</small></span>
+                <span class="project-row__link" aria-hidden="true"><span class="project-row__link-circle" aria-hidden="true">↗</span></span>
+              </div>
+            </div>
+          </div></a>
+
+          <!-- ===== Проект 2: Collet ===== -->
+          <a href="project-2.html" class="project-shell reveal"><div class="project-row">
+            <div class="project-row__img cube-wave-preview collet-wave-preview" data-cube-wave><div class="cube-wave-layer" data-wave-layer aria-hidden="true"><img class="cube-wave-background" src="assets/embedded-3c9664c37ef8ce0d5677.png" alt="" /></div><div class="cube-wave-light" data-wave-light aria-hidden="true"></div><img class="cube-wave-browser" src="assets/embedded-b0bfd528d6832049eb37.jpg" alt="Collet — платформа для коллекционеров" loading="lazy" /></div>
+            <div class="project-row__content">
+              <div class="project-row__index">
+                <span data-i18n="ru">веб-продукт</span>
+                <span data-i18n="en">web product</span>
+                <span class="project-row__num">02 / 04</span>
+              </div>
+              
+              <h3 class="project-row__problem" data-i18n="ru">Спроектировала удобное управление коллекциями и их структурой</h3>
+              <h3 class="project-row__problem" data-i18n="en">Designed intuitive collection management and organization</h3><p class="project-row__desc" data-i18n="ru">
+                Редизайн формы и структуры каталога коллекции: от запутанных
+                полей к понятной системе с приватностью на уровне отдельных данных.
+              </p>
+              <p class="project-row__desc" data-i18n="en">
+                Redesigned the collection catalogue form and structure: from
+                confusing fields to a clear system with field-level data privacy.
+              </p>
+
+              <div class="project-row__stat">
+                <span class="project-row__stat-value">≈20</span>
+                <span class="project-row__stat-caption" data-i18n="ru">Улучшений: от добавления предмета до управления публичным показом коллекции</span>
+                <span class="project-row__stat-caption" data-i18n="en">Improvements, from adding an item to managing public collection display</span>
+                <span class="project-row__link" aria-hidden="true"><span class="project-row__link-circle" aria-hidden="true">↗</span></span>
+              </div>
+            </div>
+          </div></a>
+
+          <!-- ===== Проект 3: Cube.market, личные кабинеты ===== -->
+          <a href="project-3.html" class="project-shell reveal"><div class="project-row">
+            <div class="project-row__img cube-wave-preview seller-wave-preview" data-cube-wave><div class="cube-wave-layer" data-wave-layer aria-hidden="true"><img class="cube-wave-background" src="assets/embedded-78eee89e472c63c1c3b0.png" alt="" /></div><div class="cube-wave-light" data-wave-light aria-hidden="true"></div><img class="cube-wave-browser" src="assets/embedded-c1eedacfbf16a2b11fd8.png" alt="Cube.market — кабинет продавца" loading="lazy" /></div>
+            <div class="project-row__content">
+              <div class="project-row__index">
+                <span data-i18n="ru">e-commerce</span>
+                <span data-i18n="en">e-commerce</span>
+                <span class="project-row__num">03 / 04</span>
+              </div>
+              
+              <h3 class="project-row__problem" data-i18n="ru">Создала кабинет продавца и развила его под новый ассортимент</h3>
+              <h3 class="project-row__problem" data-i18n="en">Created a seller account and expanded it for new product categories</h3><p class="project-row__desc" data-i18n="ru">
+                Дизайн личного кабинета продавца с нуля: от простой формы
+                для художников-одиночек до системы для брендов дизайна и моды.
+              </p>
+              <p class="project-row__desc" data-i18n="en">
+                Seller account designed from scratch: from a simple form for
+                solo artists to a system built for design and fashion brands.
+              </p>
+
+              <div class="project-row__stat">
+                <span class="project-row__stat-value">2</span>
+                <span class="project-row__stat-caption" data-i18n="ru">Аудитории в одной системе: художники и бренды</span>
+                <span class="project-row__stat-caption" data-i18n="en">Audiences served by one system: artists and brands</span>
+                <span class="project-row__link" aria-hidden="true"><span class="project-row__link-circle" aria-hidden="true">↗</span></span>
+              </div>
+            </div>
+          </div></a>
+
+          <!-- ===== Проект 4: MakeStep ===== -->
+          <a href="project-4.html" class="project-shell reveal"><div class="project-row">
+            <div class="project-row__img cube-wave-preview mobile-wave-preview" data-cube-wave><div class="cube-wave-layer" data-wave-layer aria-hidden="true"><img class="cube-wave-background" src="assets/embedded-9ef63fb77416b1056fee.png" alt="" /></div><div class="cube-wave-light" data-wave-light aria-hidden="true"></div><img class="cube-wave-browser" src="assets/embedded-1616e406b19b154f9802.png" alt="MakeStep — мобильные сценарии тренировок" loading="lazy" /></div>
+            <div class="project-row__content">
+              <div class="project-row__index">
+                <span data-i18n="ru">мобильное приложение</span>
+                <span data-i18n="en">mobile app</span>
+                <span class="project-row__num">04 / 04</span>
+              </div>
+              
+              <h3 class="project-row__problem" data-i18n="ru">Спроектировала мобильные сценарии для платформы онлайн-тренировок</h3>
+              <h3 class="project-row__problem" data-i18n="en">Designed mobile experiences for an online workout platform</h3><p class="project-row__desc" data-i18n="ru">
+                От видеокомнаты до монетизации тренеров: системная работа
+                над продуктом на стыке live-видео, комьюнити и геймификации.
+              </p>
+              <p class="project-row__desc" data-i18n="en">
+                From the video room to coach monetization: systemic work
+                at the intersection of live video, community, and gamification.
+              </p>
+
+              <div class="project-row__stat">
+                <span class="project-row__stat-value">8</span>
+                <span class="project-row__stat-caption" data-i18n="ru">Функций спроектировано в одном продукте за 8 месяцев</span>
+                <span class="project-row__stat-caption" data-i18n="en">Features shipped for one product in 8 months</span>
+                <span class="project-row__link" aria-hidden="true"><span class="project-row__link-circle" aria-hidden="true">↗</span></span>
+              </div>
+            </div>
+          </div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ОБО МНЕ ============ -->
+    <section class="about" id="about">
+      <div class="container about__inner about__inner--editorial">
+        <div class="about__text reveal">
+          <p class="about__eyebrow" data-i18n="ru">ЗА КАЖДЫМ РЕШЕНИЕМ СТОИТ ЧЕЛОВЕК</p>
+          <p class="about__eyebrow" data-i18n="en">BEHIND EVERY DECISION IS A HUMAN</p>
+          <div class="section-head section-head--left">
+            <h2 class="section-head__title" data-i18n="ru">Обо мне</h2>
+            <h2 class="section-head__title" data-i18n="en">About me</h2>
+          </div>
+          <p data-i18n="ru">
+            Меня зовут Анна. Я проектирую интерфейсы для продуктов на стыке разных
+            индустрий, от маркетплейсов до мобильных приложений. Люблю задачи
+            без готовых решений, где нет референсов внутри продукта и приходится
+            строить логику с нуля. Каталог коллекционных предметов, вовлечение
+            пользователя в реальном времени: в таких случаях интуиции недостаточно,
+            нужны аналитика, воронки и юзабилити-тесты.
+          </p>
+          <p data-i18n="en">
+            My name is Anna. I design interfaces for products at the intersection
+            of different industries, from marketplaces to mobile apps. I love tasks
+            with no ready-made solution, where there's no reference point inside
+            the product and the logic has to be built from scratch. Cataloguing
+            collectible items, real-time user engagement: in cases like these
+            intuition isn't enough, you need analytics, funnels, and usability tests.
+          </p>
+          <p data-i18n="ru">
+            Более 5 лет работаю с продуктовыми командами над веб- и мобильными
+            приложениями: от стартапов до продуктовых компаний. Работаю в спринтах
+            совместно с разработчиками, довожу дизайн-задачу из бэклога до готового
+            к разработке макета.
+          </p>
+          <p data-i18n="en">
+            For over 5 years I've worked with product teams on web and mobile
+            applications: from startups to product companies. I work in sprints
+            alongside developers, taking a design task from the backlog to
+            a dev-ready mockup.
+          </p>
+
+          <p data-i18n="ru">Осваиваю AI-продакшен: создаю рекламные концепции и ролики для брендов.</p>
+          <p data-i18n="en">Exploring AI production: creating advertising concepts and videos for brands.</p>
+
+<div class="about-skill-groups"><div class="about-skill-group"><h3 class="about__subhead" data-i18n="ru">Инструменты</h3><h3 class="about__subhead" data-i18n="en">Tools</h3><ul class="tags"><li>Figma</li><li>Miro</li><li>Photoshop</li><li>Illustrator</li><li>After Effects</li><li>GSAP</li><li>Lottie</li><li data-i18n="ru">Яндекс Метрика</li><li data-i18n="en">Yandex Metrica</li><li>Webflow</li><li>HTML / CSS / JavaScript</li><li>VS Code</li></ul></div><div class="about-skill-group"><h3 class="about__subhead" data-i18n="ru">ИИ-джуны</h3><h3 class="about__subhead" data-i18n="en">AI juniors</h3><ul class="tags"><li>ChatGPT</li><li>Claude</li><li>Kling</li><li>Higgsfield</li></ul></div><div class="about-skill-group"><h3 class="about__subhead" data-i18n="ru">Навыки</h3><h3 class="about__subhead" data-i18n="en">Skills</h3><ul class="tags"><li data-i18n="ru">UX-исследования и тестирование</li><li data-i18n="en">UX research and testing</li><li data-i18n="ru">Информационная архитектура</li><li data-i18n="en">Information architecture</li><li data-i18n="ru">Прототипирование</li><li data-i18n="en">Prototyping</li><li data-i18n="ru">Дизайн-системы</li><li data-i18n="en">Design systems</li><li data-i18n="ru">Веб- и мобильные интерфейсы</li><li data-i18n="en">Web and mobile interfaces</li><li data-i18n="ru">Сопровождение разработки</li><li data-i18n="en">Development collaboration</li></ul></div></div><p class="about-language-note" data-i18n="ru">Английский B2 · Русский — родной</p><p class="about-language-note" data-i18n="en">English B2 · Russian — native</p>
+        </div>
+
+        <div class="growth reveal" id="experience" aria-labelledby="growth-title">
+          <div class="growth__intro">
+            <div><span class="growth__kicker" data-i18n="ru">ОПЫТ / 2022 — СЕЙЧАС</span><span class="growth__kicker" data-i18n="en">EXPERIENCE / 2022 — NOW</span>
+              <h2 id="growth-title" data-i18n="ru">Мои точки <span class="growth__accent">роста.</span></h2>
+              <h2 data-i18n="en">My growth <span class="growth__accent">milestones.</span></h2>
+            </div>
+            <p data-i18n="ru">От веб-дизайна и разработки до сложных продуктовых систем. Каждый проект расширял мой опыт и помогал находить новые подходы к решению задач.</p>
+            <p data-i18n="en">From web design and development to complex product systems. Every project broadened my experience and helped me discover new ways to solve problems.</p>
+          </div>
+          <div class="growth__columns" aria-hidden="true" data-i18n="ru"><span>КОМПАНИЯ / РОЛЬ / ПЕРИОД</span><span>МОЙ ВКЛАД</span></div><div class="growth__columns" aria-hidden="true" data-i18n="en"><span>COMPANY / ROLE / PERIOD</span><span>MY CONTRIBUTION</span></div>
+          <article class="growth__item">
+            <div class="growth__index growth__logo"><img src="assets/embedded-1cfd1e677a3c287a195c.svg" alt="" loading="lazy"></div>
+            <div class="growth__identity"><h4>Cube.market</h4><p data-i18n="ru">Продуктовый дизайнер</p><p data-i18n="en">Product Designer</p><time data-i18n="ru">2024 — Н.В.</time><time data-i18n="en">2024 — NOW</time></div>
+            <div class="growth__contribution"><ul class="growth__bullets" data-i18n="ru"><li>Проектирую единую систему для покупателей, галерей и продавцов: от поиска искусства и оформления заказа до управления каталогом и продажами.</li><li>Пересобрала ключевые пользовательские сценарии и спроектировала B2B-кабинеты с вариациями товаров, статусами и публикацией.</li><li>Развиваю дизайн-систему и сопровождаю решения от продуктовой логики до передачи разработчикам.</li></ul><ul class="growth__bullets" data-i18n="en"><li>I connect the customer and seller sides of a curated marketplace, from artwork discovery and checkout to catalog management and sales.</li><li>Redesigned core user journeys and built B2B workflows for product variants, statuses, and publishing.</li><li>Develop a scalable design system and take ideas from product logic through engineering handoff.</li></ul></div>
+          </article>
+          <article class="growth__item">
+            <div class="growth__index growth__logo"><img src="assets/embedded-34190765a47f18bdf457.png" alt="" loading="lazy"></div>
+            <div class="growth__identity"><h4>InfoMediaDigital</h4><p data-i18n="ru">Веб-дизайнер и разработчик</p><p data-i18n="en">Web Designer & Developer</p><time data-i18n="ru">2024</time><time data-i18n="en">2024</time></div>
+            <div class="growth__contribution"><ul class="growth__bullets" data-i18n="ru"><li>Превращала визуальные концепции в интерактивные сайты: сама собирала адаптивную верстку, анимации и пользовательские переходы.</li><li>Работала на стыке арт-дирекшена и разработки, чтобы идея сохранялась и в макете, и в браузере.</li></ul><ul class="growth__bullets" data-i18n="en"><li>Turned visual concepts into interactive websites, building responsive layouts, motion, and transitions myself.</li><li>Worked across art direction and implementation so the design intent survived in the browser.</li></ul></div>
+          </article>
+          <article class="growth__item">
+            <div class="growth__index growth__logo"><img src="assets/embedded-b646cd2a51309811735b.svg" alt="" loading="lazy"></div>
+            <div class="growth__identity"><h4>Upwork · Freelance</h4><p data-i18n="ru">Продуктовый и UX/UI-дизайнер</p><p data-i18n="en">Product & UI/UX Designer</p><time data-i18n="ru">2023 — 2024</time><time data-i18n="en">2023 — 2024</time></div>
+            <div class="growth__contribution"><ul class="growth__bullets" data-i18n="ru"><li>Работала напрямую с международными заказчиками: от постановки задачи до прототипов и готовых интерфейсов.</li><li>Проектировала улучшения мобильных приложений и сложные B2B-дашборды с большим объёмом данных.</li></ul><ul class="growth__bullets" data-i18n="en"><li>Worked directly with international clients, shaping ambiguous briefs into prototypes and production-ready interfaces.</li><li>Designed mobile product improvements and data-heavy B2B dashboard concepts.</li></ul></div>
+          </article>
+          <article class="growth__item">
+            <div class="growth__index growth__logo"><img src="assets/embedded-fc6ad1f386624616694f.svg" alt="" loading="lazy"></div>
+            <div class="growth__identity"><h4>AVA digital</h4><p data-i18n="ru">UX/UI-дизайнер</p><p data-i18n="en">UI/UX Designer</p><time data-i18n="ru">2023</time><time data-i18n="en">2023</time></div>
+            <div class="growth__contribution"><ul class="growth__bullets" data-i18n="ru"><li>Улучшала существующие корпоративные сайты: перерабатывала пользовательские маршруты, адаптивные экраны и визуальную иерархию.</li><li>Согласовывала интерфейсные решения с фронтенд-командой, чтобы дизайн оставался последовательным в реализации.</li></ul><ul class="growth__bullets" data-i18n="en"><li>Improved established corporate websites through clearer user flows, responsive layouts, and stronger visual hierarchy.</li><li>Collaborated with frontend engineers to keep the experience consistent in production.</li></ul></div>
+          </article>
+          <article class="growth__item">
+            <div class="growth__index growth__logo"><img src="assets/embedded-3fde5eb854d48afd925a.png" alt="" loading="lazy"></div>
+            <div class="growth__identity"><h4>Sarafan Technology</h4><p data-i18n="ru">UX/UI-дизайнер</p><p data-i18n="en">UI/UX Designer</p><time data-i18n="ru">2022 — 2023</time><time data-i18n="en">2022 — 2023</time></div>
+            <div class="growth__contribution"><ul class="growth__bullets" data-i18n="ru"><li>Проектировала видеоплеер, навигацию по тренировкам и интерактивные сценарии для фитнес-платформы MakeStep.</li><li>Исследовала, как прогресс, награды и игровые механики помогают вовлечению, и проверяла идеи в интерактивных прототипах.</li></ul><ul class="growth__bullets" data-i18n="en"><li>Designed video-player interactions, workout navigation, and user journeys for the MakeStep fitness platform.</li><li>Explored progress tracking, rewards, and gamification through interactive prototypes.</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ КОНТАКТЫ ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact__inner contact__text reveal">
+        <h2 class="contact__title" data-i18n="ru">Ищете дизайнера?<br />Теперь вы меня знаете 🙂</h2>
+        <h2 class="contact__title" data-i18n="en">Looking for a designer?<br />Now you know me 🙂</h2>
+        <p class="contact__subtitle" data-i18n="ru">
+          Открыта к новым проектам и сотрудничеству. Отвечу в течение 24 часов.
+        </p>
+        <p class="contact__subtitle" data-i18n="en">
+          Open to new projects and collaboration. I'll reply within 24 hours.
+        </p>
+        <ul class="socials socials--buttons">
+          <li><a href="#" title="Telegram"><span class="contact-social__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="m9.78 18.65.28-4.23 7.68-6.93c.34-.31-.07-.46-.52-.19l-9.48 5.99-4.1-1.28c-.88-.25-.89-.86.2-1.3L19.81 4.6c.73-.33 1.43.18 1.15 1.3l-2.72 12.82c-.19.91-.74 1.13-1.5.71l-4.14-3.06-1.99 1.94c-.23.23-.42.42-.83.42Z"/></svg></span><span>Telegram</span></a></li>
+          <li><a href="#" title="LinkedIn"><span class="contact-social__icon"><span class="contact-social__linkedin" aria-hidden="true">in</span></span><span>LinkedIn</span></a></li>
+          <li><!-- Temporarily hidden: <a href="#" title="Behance"><span class="contact-social__icon"><span class="contact-social__behance" aria-hidden="true">Bē</span></span><span>Behance</span></a> --></li>
+          <li><!-- Temporarily hidden: <a href="#" title="Dribbble"><span class="contact-social__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M7 4.6c5 5.5 7.6 10.6 9 15M3.3 10c7.5.5 12-1.6 15-5M5 18c3.5-5 8.5-7.5 15.7-5.5" stroke="currentColor" stroke-width="1.5"/></svg></span><span>Dribbble</span></a> --></li>
+        </ul>
+      </div>
+      <div class="footer-glass" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Анна Иванова</span>
+      <span class="footer__note" data-i18n="ru">Сделано с заботой о пользователе</span>
+      <span class="footer__note" data-i18n="en">Made with care for the user</span>
+    </div>
+  </footer>
+
+  <script src="script.js?v=footer-flight-4"></script>
+  <script src="career-climber.js" defer></script>
+  <script type="module" src="hero-particles.js"></script>
+<script id="cube-wave-preview-script">
+(function(){
+'use strict';
+document.querySelectorAll('[data-cube-wave]').forEach(function(preview){
+var card=preview.closest('.project-shell'),layer=preview.querySelector('[data-wave-layer]'),light=preview.querySelector('[data-wave-light]');
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)'),fine=window.matchMedia('(hover: hover) and (pointer: fine)');
+var target=0,amount=0,phase=0,last=0,raf=0,px=0,py=0;
+function reset(){target=0;amount=0;last=0;if(raf)cancelAnimationFrame(raf);raf=0;layer.style.transform='';layer.style.willChange='';light.style.opacity='0';light.style.transform='';}
+function tick(now){
+var dt=last?Math.min((now-last)/1000,.05):1/60;last=now;amount+=(target-amount)*(1-Math.exp(-dt*(target?3.8:5.2)));phase+=dt*amount;
+if(!target&&amount<.001){reset();return;}
+var x=(Math.sin(phase*1.05)*4.2+px*.85)*amount,y=(Math.cos(phase*.82)*3.4+py*.65)*amount;
+layer.style.transform='translate3d('+x+'%,'+y+'%,0) scale('+(1+amount*.012)+')';
+
+light.style.opacity=String(amount*.6);light.style.transform='translate3d('+(-x*2)+'%,'+(-y*2)+'%,0)';raf=requestAnimationFrame(tick);
+}
+card.addEventListener('pointerenter',function(){if(reduced.matches||!fine.matches)return;target=1;layer.style.willChange='transform';if(!raf){last=0;raf=requestAnimationFrame(tick);}});
+card.addEventListener('pointermove',function(e){if(!target)return;var r=preview.getBoundingClientRect();px=Math.max(-1,Math.min(1,(e.clientX-r.left)/r.width*2-1));py=Math.max(-1,Math.min(1,(e.clientY-r.top)/r.height*2-1));});
+card.addEventListener('pointerleave',function(){target=0;px=py=0;});
+document.addEventListener('visibilitychange',function(){if(document.hidden)reset();});
+reduced.addEventListener('change',reset);fine.addEventListener('change',reset);
+});
+})();
+</script>
+<script id="footer-contact-game-layout-script">
+(function(){
+var contact=document.getElementById('contact');if(!contact)return;
+var pending=0;
+function arrange(){pending=0;var note=contact.querySelector('.footer-game-message'),basket=contact.querySelector('.footer-idea-box');if(!note||!basket)return;
+if(note.parentNode!==contact)contact.appendChild(note);
+var c=contact.getBoundingClientRect(),social=contact.querySelector('.socials'),sr=social?social.getBoundingClientRect():null;
+if(c.width<=600&&sr){
+var compactHeight=Math.ceil(sr.bottom-c.top+390);
+if(Math.abs(c.height-compactHeight)>1){contact.style.setProperty('height',compactHeight+'px','important');schedule();return;}
+}else if(contact.style.getPropertyValue('height')){contact.style.removeProperty('height');schedule();return;}
+var b=basket.getBoundingClientRect();
+var mobile=c.width<=600,w=mobile?Math.min(300,c.width-40):Math.min(300,Math.max(220,c.width*.28));
+var x=mobile?(c.width-w)/2:Math.max(24,b.left-c.left-w-28);
+var y=mobile?b.bottom-c.top+18:Math.max(b.top-c.top+12,sr?sr.bottom-c.top+28:0);
+note.style.left=x+'px';note.style.top=y+'px';note.style.width=w+'px';
+}
+function schedule(){if(!pending)pending=requestAnimationFrame(arrange);}
+new MutationObserver(schedule).observe(contact,{childList:true,subtree:true});
+if(window.ResizeObserver)new ResizeObserver(schedule).observe(contact);
+window.addEventListener('resize',schedule);schedule();
+})();
+</script>
+<script id="mobile-hero-title-fit">
+(function(){var title=document.querySelector('.hero__title');if(!title)return;var rows=title.querySelectorAll('.word'),frame=0;
+function fit(){frame=0;if(innerWidth>600){rows.forEach(function(r){r.style.removeProperty('font-size');});return;}
+var available=title.getBoundingClientRect().width-2;
+rows.forEach(function(row){row.style.fontSize='100px';var measured=row.getBoundingClientRect().width;if(measured>0)row.style.fontSize=(100*available/measured)+'px';});}
+function schedule(){if(!frame)frame=requestAnimationFrame(fit);}
+window.addEventListener('resize',schedule);if(document.fonts)document.fonts.ready.then(schedule);schedule();})();
+</script>
+</body>
+
+</html>

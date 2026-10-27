@@ -1,0 +1,85 @@
+/* Изолированные стили: не меняют оформление существующих секций */
+.career-track {
+  position:fixed; right:clamp(10px,2vw,32px); top:0;
+  width:clamp(94px,10vw,150px); height:100vh; height:100dvh;
+  z-index:20; overflow:hidden; pointer-events:none;
+  opacity:0; visibility:hidden;
+  transition: opacity 1.15s cubic-bezier(.22,1,.36,1), visibility 0s linear 1.15s;
+  will-change:opacity;
+}
+.career-track.is-visible {
+  opacity:1; visibility:visible;
+  transition: opacity 1.15s cubic-bezier(.22,1,.36,1), visibility 0s linear 0s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .career-track, .career-track.is-visible { transition-duration: 0.01ms; }
+}
+.career-ladder { position:absolute; inset:0; }
+.career-ladder::before,.career-ladder::after {
+  content:""; position:absolute; top:0; bottom:0; width:2.5px;
+  background:#292929; border-radius:2px;
+}
+.career-ladder::before { left:9%; }
+.career-ladder::after { right:9%; }
+.career-rung { position:absolute; left:9%; width:82%; height:2.5px; background:#292929; }
+.career-climber {
+  position:absolute; left:50%; top:0; width:82%;
+  transform:translate(-50%,0); will-change:transform;
+}
+.career-pose {
+  display:block; position:absolute; top:0; left:0; width:100%;
+  height:auto; opacity:0; pointer-events:none;
+}
+.career-pose:first-child { opacity:1; }
+@media (max-width:600px) {
+  .career-track { width:90px; right:3px; }
+}
+
+/* Mobile readability: keep the illustration decorative, not competing with copy. */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .career-track { width: 94px; right: 4px; }
+  .career-ladder { opacity: .24; }
+  .career-climber { opacity: 1 !important; }
+}
+@media (max-width: 600px) {
+  .career-track { width: 72px; right: 2px; }
+  .career-ladder { opacity: .12; }
+  .career-climber { opacity: 1 !important; }
+}
+
+/* Final mobile refinement: decorative only, no obstruction to copy. */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .career-track { right: 0; width: 82px; }
+  .career-ladder { opacity: .18; }
+  .career-climber { opacity: 1 !important; }
+}
+@media (max-width: 600px) {
+  .career-track { right: 0; width: 62px; }
+  .career-ladder { opacity: .09; }
+  .career-climber { opacity: 1 !important; }
+}
+/* Preserve crisp single-frame character silhouettes. */
+.career-pose { backface-visibility: hidden; }
+
+/* Mobile/tablet: actual content above the fixed decoration. */
+@media (max-width: 1024px) {
+  .career-track { z-index: 1 !important; }
+  main { position: relative; z-index: auto; }
+  main > section { position: relative; z-index: auto; }
+  main > section > * { position: relative; z-index: 2; }
+  .career-ladder { opacity: .075 !important; }
+  .career-climber { opacity: 1 !important; }
+}
+@media (max-width: 600px) {
+  .career-track { width: 56px !important; right: 0 !important; }
+  .career-ladder { opacity: .035 !important; }
+  .career-climber { opacity: 1 !important; }
+}
+
+/* Align the decorative fixed rail with the reserved desktop column. */
+@media (min-width: 1025px) {
+  .career-track {
+    right: clamp(10px, 1.5vw, 24px);
+    width: clamp(94px, 8.5vw, 126px);
+  }
+}

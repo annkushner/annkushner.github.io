@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-title-ru="Collet — Анна Иванова, UX/UI Дизайнер" data-i18n-title-en="Collet — Anna Ivanova, UX/UI Designer">Collet — Анна Иванова, UX/UI Дизайнер</title>
+  <meta name="description" data-i18n-desc-ru="Кейс: редизайн каталогизации коллекции для платформы коллекционеров Collet." data-i18n-desc-en="Case study: redesign of collection cataloguing for the collectors platform Collet." content="Кейс: редизайн каталогизации коллекции для платформы коллекционеров Collet.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+<style>
+.p-hero .p-back{display:table;margin-bottom:24px}.p-hero__category{display:block!important}
+html[lang="ru"] .p-hero__category[data-i18n="en"],html[lang="en"] .p-hero__category[data-i18n="ru"]{display:none!important}
+.p-meta{grid-template-columns:repeat(4,minmax(0,1fr))}.p-meta__item>span:nth-child(-n+2){font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-mute)}
+.p-meta__item>span:nth-child(n+3){font-size:16px;line-height:1.4;font-weight:500;letter-spacing:normal;text-transform:none;color:var(--text)}
+.p-section__inner p{max-width:78ch}.p-section__inner p+p{margin-top:20px}
+.collet-table-wrap{overflow-x:auto;margin:32px 0;border:1px solid var(--line);border-radius:var(--radius-sm)}
+.collet-table{width:100%;min-width:600px;border-collapse:collapse;font-size:14px;line-height:1.55;text-align:left}
+.collet-table th,.collet-table td{padding:20px;vertical-align:top;border-bottom:1px solid var(--line)}
+.collet-table thead{background:var(--bg-soft)}.collet-table tbody th{font-weight:500;white-space:nowrap}.collet-table tr:last-child>*{border-bottom:0}
+@media(max-width:600px){.p-meta{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.collet-table th,.collet-table td{padding:16px}}
+</style><style>.case-live-site{border-top:1px solid var(--line)}.case-live-site__link{display:inline-flex;align-items:center;gap:12px;margin-top:20px;padding-bottom:5px;border-bottom:1px solid currentColor;color:var(--text);font-size:18px;font-weight:500;text-decoration:none;transition:color .2s}.case-live-site__link:hover{color:var(--accent)}.case-live-site__link:focus-visible{outline:2px solid var(--accent);outline-offset:6px}</style>
+</head>
+<body>
+  <!-- ============ НАВИГАЦИЯ ============ -->
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Анна Иванова</a>
+    <nav class="nav__links">
+      <a href="index.html#projects" data-i18n="ru">Проекты</a>
+      <a href="index.html#projects" data-i18n="en">Projects</a>
+      <a href="index.html#about" data-i18n="ru">Обо мне</a>
+      <a href="index.html#about" data-i18n="en">About</a>
+      <div class="lang" data-lang-menu>
+        <button class="lang__trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-options" aria-label="Choose language">
+          <span data-lang-current>EN</span><svg class="lang__chevron" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m3.5 6 4.5 4 4.5-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang__menu" id="lang-options" role="menu" hidden>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang-btn="en">English</button>
+          <button type="button" role="menuitemradio" aria-checked="false" data-lang-btn="ru">Русский</button>
+        </div>
+      </div>
+      <a href="index.html#contact" class="nav__cta" data-i18n="ru">Связаться</a>
+      <a href="index.html#contact" class="nav__cta" data-i18n="en">Get in touch</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main><section class="p-hero"><div class="container p-hero__inner"><a href="index.html#projects" class="p-back reveal" data-i18n="ru">← Все проекты</a><a href="index.html#projects" class="p-back reveal" data-i18n="en">← All projects</a><span class="p-hero__category reveal" data-i18n="ru">Collet · Платформа для коллекционеров</span><span class="p-hero__category reveal" data-i18n="en">Collet · A platform for collectors</span><h1 class="p-hero__title reveal" data-i18n="ru">Спроектировала управление коллекциями и их структурой</h1><h1 class="p-hero__title reveal" data-i18n="en">Designed collection management and organization</h1><p class="p-hero__lead reveal" data-i18n="ru">Переработала добавление предметов, профиль коллекционера и карточку предмета. Связала личный учёт с публичным показом коллекции и настройками приватности отдельных данных.</p><p class="p-hero__lead reveal" data-i18n="en">Redesigned item entry, collector profiles and item pages. Connected personal record keeping with public collection display and field-level privacy controls.</p><div class="p-meta reveal"><div class="p-meta__item"><span class="" data-i18n="ru">Роль</span><span class="" data-i18n="en">Role</span><span class="" data-i18n="ru">Продуктовый дизайнер</span><span class="" data-i18n="en">Product Designer</span></div><div class="p-meta__item"><span class="" data-i18n="ru">Задача</span><span class="" data-i18n="en">Challenge</span><span class="" data-i18n="ru">Развитие платформы</span><span class="" data-i18n="en">Platform evolution</span></div><div class="p-meta__item"><span class="" data-i18n="ru">Охват</span><span class="" data-i18n="en">Scope</span><span class="" data-i18n="ru">Форма · Профиль · Карточка</span><span class="" data-i18n="en">Form · Profile · Item page</span></div><div class="p-meta__item"><span class="" data-i18n="ru">Статус</span><span class="" data-i18n="en">Status</span><span class="" data-i18n="ru">Реализовано в продукте</span><span class="" data-i18n="en">Implemented</span></div></div></div></section><div class="p-cover reveal">
+      <div class="p-cover__inner">
+        <img src="mockup_project2.png" alt="Collet — новая форма добавления предмета">
+      </div>
+    </div>
+
+    <section class="p-section"><div class="container p-section__inner"><span class="p-section__label reveal" data-i18n="ru">Контекст и задача</span><span class="p-section__label reveal" data-i18n="en">Context and challenge</span><h2 class="p-section__title reveal" data-i18n="ru">Упорядочить продукт вокруг задач коллекционера</h2><h2 class="p-section__title reveal" data-i18n="en">Organize the product around collectors’ needs</h2><p class="reveal" data-i18n="ru">Collet развивался в период интереса к NFT и поддерживал в том числе цифровое коллекционирование. При этом платформе требовались понятные сценарии для владельцев физических предметов: вести каталог, хранить сведения о вещах и делиться коллекцией.</p><p class="reveal" data-i18n="en">Collet developed during the NFT boom and also supported digital collecting. The platform needed clear workflows for physical-item collectors: maintaining a catalogue, keeping records and sharing their collections.</p><p class="reveal" data-i18n="ru">Стейкхолдеры предложили пересмотреть логику интерфейса с опорой на опыт других коллекционных платформ. Изменения затронули разные части продукта. Для кейса я выбрала три связанных примера: добавление предмета, профиль с каталогом и отображение данных в карточке.</p><p class="reveal" data-i18n="en">Stakeholders asked for a more logical interface informed by other collecting platforms. The work spanned multiple areas. This case focuses on three connected examples: adding an item, the profile and catalogue, and the item detail page.</p><p class="reveal" data-i18n="ru">Я проектировала эти интерфейсы и согласовывала решения с проджект-менеджером, иногда напрямую со стейкхолдером. Подход к приватности отдельных полей мы сформировали совместно с проджектом. Решения проверяли и согласовывали внутри команды; описанные изменения работают в продукте.</p><p class="reveal" data-i18n="en">I designed these interfaces and reviewed decisions with the project manager and, at times, a stakeholder. The project manager and I developed the field-level privacy approach together. The team reviewed the solutions, and the changes described here are implemented.</p></div></section><section class="p-section p-section--soft"><div class="container p-section__inner"><span class="p-section__label reveal" data-i18n="ru">Исследование · Анализ аналогов</span><span class="p-section__label reveal" data-i18n="en">Research · Comparative review</span><h2 class="p-section__title reveal" data-i18n="ru">Сравнила подходы трёх платформ</h2><h2 class="p-section__title reveal" data-i18n="en">Compared approaches across three platforms</h2><p class="reveal" data-i18n="ru">Перед проектированием изучала, как hobbyDB, Collectibles.com и Artwork Archive решают добавление предметов, организацию каталога и показ коллекции. Ниже собраны выводы из рабочих заметок, оформленные для кейса.</p><p class="reveal" data-i18n="en">Before designing, I reviewed how hobbyDB, Collectibles.com and Artwork Archive approached item entry, catalogue organization and collection display. The summary below presents findings from my working notes, organized for this case.</p><figure class="p-figure reveal"><img src="assets/embedded-1e6cf29f85f39ed5eb02.png" alt="Авторская таблица сравнительного анализа Collet, hobbyDB, Collectibles.com и Artwork Archive" loading="lazy"><figcaption data-i18n="ru">Сравнительный анализ: добавление предмета, показ коллекции и приватность. Рабочие заметки до проектирования, оформленные в таблицу для кейса. Нажмите на изображение, чтобы рассмотреть детали.</figcaption><figcaption data-i18n="en">Comparative review of item entry, collection display and privacy. Pre-design working notes organized into a table for this case. Click to view details. Original research artifact in Russian.</figcaption></figure><h3 class="reveal" data-i18n="ru">Что использовала в проектировании</h3><h3 class="reveal" data-i18n="en">What informed the design</h3><ul class="p-list"><li class="reveal" data-i18n="ru">Добавление своего предмета: сохранить возможность вести каталог независимо от наличия объекта в общей базе.</li><li class="reveal" data-i18n="en">Own-item entry: support cataloguing even when an item is absent from a shared database.</li><li class="reveal" data-i18n="ru">Понятный ручной ввод: сгруппировать поля и сделать подписи однозначными.</li><li class="reveal" data-i18n="en">Clear manual entry: group fields and make labels unambiguous.</li><li class="reveal" data-i18n="ru">Личный учёт и публичный показ: связать документы с предметом и предусмотреть настройки видимости данных.</li><li class="reveal" data-i18n="en">Personal records and public display: attach documents to items and provide data visibility controls.</li></ul><p class="reveal" data-i18n="ru">Сравнение помогло определить направления проектирования, но не подтверждало потребности пользователей Collet само по себе. Отдельным основанием для приватности были запросы коллекционеров: они не хотели выставлять все предметы напоказ. Вместе с проджектом мы развили эту задачу до управления видимостью отдельных данных.</p><p class="reveal" data-i18n="en">The comparison informed design directions rather than proving Collet users’ needs. Collectors’ requests provided a separate reason to address privacy: they did not want to show every item publicly. Together with the project manager, I extended this into control over individual data fields.</p></div></section><section class="p-section"><div class="container p-section__inner"><span class="p-section__label reveal" data-i18n="ru">Пример 1 · Добавление предмета</span><span class="p-section__label reveal" data-i18n="en">Example 1 · Item entry</span><h2 class="p-section__title reveal" data-i18n="ru">Сначала основные сведения, затем детали</h2><h2 class="p-section__title reveal" data-i18n="en">Essential information first, details next</h2><p class="reveal" data-i18n="ru">В исходной форме поля шли плоским списком, встречались одинаковые подписи и переключатели без понятного объяснения. По интерфейсу было трудно определить назначение отдельных полей. Я пересобрала форму вокруг последовательности заполнения, а не перечня доступных атрибутов.</p><p class="reveal" data-i18n="en">The original form presented a flat field list, repeated labels and unexplained toggles. The interface did not make the purpose of every field clear. I reorganized the form around the entry workflow rather than the list of available attributes.</p><div class="p-gallery reveal">
+          <figure class="p-gallery__item">
+            <img src="Add_item_old.png" alt="Старая форма добавления предмета">
+            <figcaption data-i18n="ru">До: плоский список без иерархии, одинаковые лейблы, переключатели без подписей</figcaption>
+            <figcaption data-i18n="en">Before: flat field list, identical labels, unlabelled toggles</figcaption>
+          </figure>
+          <figure class="p-gallery__item">
+            <img src="add_item_new.jpg" alt="Новая форма добавления предмета">
+            <figcaption data-i18n="ru">После: смысловые группы полей, дополнительные параметры и настройки приватности</figcaption>
+            <figcaption data-i18n="en">After: meaningful field groups, additional options and privacy controls</figcaption>
+          </figure>
+        </div>
+
+        <ul class="p-list"><li class="reveal" data-i18n="ru"><b>Смысловые группы.</b> Сведения о предмете, данные о покупке и дополнительные характеристики разделены, чтобы пользователь мог заполнять их последовательно.</li><li class="reveal" data-i18n="en"><b>Meaningful groups.</b> Item information, purchase data and additional attributes are separated into a clear sequence.</li><li class="reveal" data-i18n="ru"><b>Дополнительные параметры по запросу.</b> Второстепенные сведения вынесены в раскрываемый блок, чтобы они не конкурировали с основной частью формы.</li><li class="reveal" data-i18n="en"><b>Additional options on demand.</b> Secondary details sit in an expandable section rather than competing with the primary fields.</li><li class="reveal" data-i18n="ru"><b>Приватность рядом с данными.</b> Для цены покупки, местоположения и описания предусмотрены отдельные настройки. Видимость можно выбрать там же, где вводятся сведения.</li><li class="reveal" data-i18n="en"><b>Privacy beside the data.</b> Purchase price, location and description have separate visibility settings, available at the point of entry.</li></ul></div></section><section class="p-section p-section--soft"><div class="container p-section__inner"><span class="p-section__label reveal" data-i18n="ru">Пример 2 · Профиль и каталог</span><span class="p-section__label reveal" data-i18n="en">Example 2 · Profile and catalogue</span><h2 class="p-section__title reveal" data-i18n="ru">В центре профиля сама коллекция</h2><h2 class="p-section__title reveal" data-i18n="en">Put the collection at the center of the profile</h2><p class="reveal" data-i18n="ru">В прежней структуре предметы находились ниже первого экрана, а оформление сохраняло акценты NFT-витрины. Я перенесла внимание на то, что человек собирает, и разделила задачи владельца каталога и посетителя профиля.</p><p class="reveal" data-i18n="en">Previously, collection items sat below the first screen, while the presentation retained NFT storefront conventions. I shifted the focus to what the person collects and distinguished the catalogue owner’s tasks from the profile visitor’s needs.</p><div class="p-gallery reveal">
+          <figure class="p-gallery__item">
+            <img src="account_old.png" alt="Старый профиль коллекционера">
+            <figcaption data-i18n="ru">До: предметы коллекции скрыты ниже экрана, интерес коллекционера не считывается сразу</figcaption>
+            <figcaption data-i18n="en">Before: collection items hidden below the fold, collector's focus not readable at a glance</figcaption>
+          </figure>
+          <figure class="p-gallery__item">
+            <img src="account_new.png" alt="Новый профиль коллекционера">
+            <figcaption data-i18n="ru">После: предметы коллекции сразу на первом экране, счётчики, фильтр по выставкам</figcaption>
+            <figcaption data-i18n="en">After: collection items visible on the first screen, counters, exhibition filter</figcaption>
+          </figure>
+        </div>
+
+        <ul class="p-list"><li class="reveal" data-i18n="ru"><b>Коллекция выше в структуре.</b> Предметы, их фотографии и названия помогают увидеть содержание каталога без предварительного изучения профиля.</li><li class="reveal" data-i18n="en"><b>A more prominent collection.</b> Item photos and names show what the catalogue contains without first having to explore the profile.</li><li class="reveal" data-i18n="ru"><b>Управление для владельца.</b> Создание коллекции и добавление предмета выделены как основные действия. Счётчики коллекций и предметов дают обзор содержимого.</li><li class="reveal" data-i18n="en"><b>Owner controls.</b> Creating a collection and adding an item are primary actions. Collection and item counts provide an overview.</li><li class="reveal" data-i18n="ru"><b>Публичный показ.</b> Профиль связывает информацию о коллекционере с его предметами. Фильтр доступности для выставок поддерживает отдельный сценарий показа коллекции.</li><li class="reveal" data-i18n="en"><b>Public display.</b> The profile connects the collector’s information with their items. An exhibition availability filter supports a distinct display workflow.</li></ul></div></section><section class="p-section"><div class="container p-section__inner"><span class="p-section__label reveal" data-i18n="ru">Пример 3 · Карточка предмета</span><span class="p-section__label reveal" data-i18n="en">Example 3 · Item page</span><h2 class="p-section__title reveal" data-i18n="ru">Сохранить контекст и правила доступа</h2><h2 class="p-section__title reveal" data-i18n="en">Carry context and visibility rules through</h2><p class="reveal" data-i18n="ru">Переработка формы должна была продолжаться в карточке предмета: введённые сведения необходимо показать понятно, а настройки приватности сохранить при просмотре.</p><p class="reveal" data-i18n="en">The form redesign needed to carry through to the item page: entered information had to remain clear, with privacy settings reflected in the display.</p><figure class="p-figure reveal">
+          <img src="item_page_new.png" alt="Карточка предмета в новом дизайне">
+          <figcaption data-i18n="ru">Карточка предмета: Artist/Brand отдельно от Owner, приватные поля помечены «visible only for you», документы прикреплены напрямую</figcaption>
+          <figcaption data-i18n="en">Item page: Artist/Brand separate from Owner, private fields marked "visible only for you", documents attached directly</figcaption>
+        </figure>
+
+        <ul class="p-list"><li class="reveal" data-i18n="ru"><b>Создатель и владелец разделены.</b> Автор или бренд и текущий владелец представлены как разные роли.</li><li class="reveal" data-i18n="en"><b>Creator and owner are distinct.</b> Artist or brand and current owner are presented as separate roles.</li><li class="reveal" data-i18n="ru"><b>Предмет связан с коллекциями.</b> Один объект может входить в несколько коллекций одновременно.</li><li class="reveal" data-i18n="en"><b>Items connect to collections.</b> One item can belong to multiple collections.</li><li class="reveal" data-i18n="ru"><b>Приватные сведения обозначены явно.</b> Владелец видит пометку о том, что данные доступны только ему. Документы прикреплены к самому предмету.</li><li class="reveal" data-i18n="en"><b>Private information is explicitly marked.</b> Owners can see which data is visible only to them. Documents are attached to the item itself.</li></ul></div></section><section class="p-section p-section--soft"><div class="container p-section__inner"><span class="p-section__label reveal" data-i18n="ru">Результат</span><span class="p-section__label reveal" data-i18n="en">Outcome</span><h2 class="p-section__title reveal" data-i18n="ru">Единая логика от ввода до показа коллекции</h2><h2 class="p-section__title reveal" data-i18n="en">A consistent flow from entry to collection display</h2><p class="reveal" data-i18n="ru">В продукте реализованы новая форма добавления, профиль с каталогом и карточка предмета. Они связаны общей структурой данных и настройками приватности: коллекционер может вести личный учёт и выбирать, какие сведения показывать другим.</p><p class="reveal" data-i18n="en">The new item entry form, catalogue profile and item page are implemented. They share a consistent information structure and privacy controls, allowing collectors to keep personal records and choose which details to share.</p><p class="reveal" data-i18n="ru">Решения проходили проверку и согласование внутри команды. Доступа к продуктовой аналитике у меня нет, поэтому результат здесь описан через реализованные возможности. Изменение скорости заполнения, завершения формы и вовлечённости не измерено.</p><p class="reveal" data-i18n="en">The team reviewed and approved the solutions. I do not have access to product analytics, so the outcome is described through implemented capabilities. Changes in entry speed, form completion and engagement have not been measured.</p><p class="reveal" data-i18n="ru">Для дальнейшей проверки я бы отслеживала завершение добавления предмета, время заполнения и ошибки, а также проверила на пользовательских сессиях, понятны ли настройки видимости владельцу коллекции.</p><p class="reveal" data-i18n="en">For further validation, I would track item-entry completion, completion time and errors, and use user sessions to check whether collection owners understand the visibility controls.</p></div></section><section class="p-section case-live-site"><div class="container p-section__inner">
+<span class="p-section__label reveal" data-i18n="ru">Сайт проекта</span><span class="p-section__label reveal" data-i18n="en">Project website</span>
+<p class="reveal" data-i18n="ru">Сайт платформы для коллекционеров.</p><p class="reveal" data-i18n="en">The platform website for collectors.</p>
+<a class="case-live-site__link reveal" href="https://incollet.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="ru">Посмотреть Incollet</span><span data-i18n="en">Visit Incollet</span><span aria-hidden="true">↗</span></a>
+</div></section>
+<a href="project-3.html" class="p-next">
+      <div class="p-next__inner">
+        <div class="p-next__group">
+        <div class="p-next__thumb reveal">
+        <img src="mockup_project3.png" alt="Cube.market. Личные кабинеты">
+      </div>
+        <div class="p-next__body">
+        <span class="p-next__label reveal" data-i18n="ru">Следующий проект</span>
+        <span class="p-next__label reveal" data-i18n="en">Next project</span>
+        <span class="p-next__title reveal" data-i18n="ru">Cube.market. Личные кабинеты</span>
+        <span class="p-next__title reveal" data-i18n="en">Cube.market. Seller accounts</span>
+      </div>
+      </div>
+      <span class="p-next__arrow reveal">→</span>
+      </div>
+    </a>
+  </main><!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Анна Иванова</span>
+      <span class="footer__note" data-i18n="ru">Сделано с заботой о пользователе</span>
+      <span class="footer__note" data-i18n="en">Made with care for the user</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

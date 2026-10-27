@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cover — Cube.market</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1400px;
+      height: 800px;
+      background: radial-gradient(ellipse at 50% 40%, #f8f8f8 0%, #e2e2e2 45%, #c0c0c0 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .browser {
+      width: 860px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 24px 64px rgba(0,0,0,0.14);
+    }
+    .browser__bar {
+      background: #F5F5F5;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 0.5px solid rgba(0,0,0,0.08);
+    }
+    .browser__dots {
+      display: flex;
+      gap: 5px;
+    }
+    .browser__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .browser__url {
+      flex: 1;
+      background: white;
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 11px;
+      color: #999;
+      border: 0.5px solid rgba(0,0,0,0.08);
+    }
+    .browser__screen img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="browser">
+    <div class="browser__bar">
+      <div class="browser__dots">
+        <div class="browser__dot" style="background: #FF5F57;"></div>
+        <div class="browser__dot" style="background: #FEBC2E;"></div>
+        <div class="browser__dot" style="background: #28C840;"></div>
+      </div>
+      <div class="browser__url">cube.market</div>
+    </div>
+    <div class="browser__screen">
+      <img src="Current_card.png" alt="Cube.market — новая карточка товара" />
+    </div>
+  </div>
+</body>
+</html>
