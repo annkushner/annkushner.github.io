@@ -264,10 +264,10 @@
   function renderGameTip(){
     gameTip.innerHTML='<span style="display:block;font-weight:600;line-height:1.5">'+words(
       'Пока думаете, над чем поработаем,<br>накидайте мне задач в корзинку.',
-      'While you’re thinking about what we could work on,<br>toss a few design tasks into my basket.'
+      'Thinking about our next project?<br>Toss a few tasks into my basket.'
     )+'</span><small style="display:block;margin:10px auto 0;max-width:330px;font-size:13px;font-weight:400;line-height:1.5;color:#aaa4b6">'+words(
       'Потяните и подбросьте кубик, чтобы попасть в корзинку.',
-      'Drag and toss a cube to land it in the basket.'
+      'Drag and toss a cube into the basket.'
     )+'</small>';
   }
 
