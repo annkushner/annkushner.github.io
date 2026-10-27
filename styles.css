@@ -1820,3 +1820,9 @@ html[lang="en"] .p-hero .p-hero__category[data-i18n="en"]{
 .contact .socials--buttons a:hover,.contact .socials--buttons a:focus-visible{color:var(--social-brand);border-color:var(--social-brand);background:color-mix(in srgb,var(--social-brand) 10%,transparent);}
 @media(max-width:600px){.contact .socials--buttons{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;max-width:370px;}.contact .socials--buttons a{padding:13px 10px;}}
 @media(prefers-reduced-motion:reduce){.contact .socials--buttons a{transition:none;}}
+
+/* Keep inactive translations hidden even when component layouts set display. */
+html[lang="en"] [data-i18n="ru"],
+html[lang="ru"] [data-i18n="en"] {
+  display: none !important;
+}
